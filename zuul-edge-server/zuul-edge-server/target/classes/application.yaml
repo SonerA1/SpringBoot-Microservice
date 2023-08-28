@@ -16,6 +16,11 @@ zuul:
       path: /api/1.0/product/**
       serviceId: product-service
       strip-prefix: false
+    product-cache-service:
+      path: /api/1.0/product-cache/**
+      serviceId: product-cache-service
+      strip-prefix: false
+
 
 endpoints:
   routes:
@@ -53,4 +58,3 @@ eureka:
     prefer-ip-address: true
     lease-renewal-interval-in-seconds: 10
     instance-id: ${spring.application.name}:${random.uuid}
-
