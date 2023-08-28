@@ -1,0 +1,15 @@
+com\sonera1\stockmanagement\productcacheservice\feign\products\ProductServiceFeignClient.class
+com\sonera1\stockmanagement\productcacheservice\service\ProductRepositoryServiceImpl.class
+com\sonera1\stockmanagement\productcacheservice\response\InternalApiResponse$InternalApiResponseBuilder.class
+com\sonera1\stockmanagement\productcacheservice\response\FriendlyMessage.class
+com\sonera1\stockmanagement\productcacheservice\repository\entity\Product.class
+com\sonera1\stockmanagement\productcacheservice\response\ProductResponse$ProductResponseBuilder.class
+com\sonera1\stockmanagement\productcacheservice\response\InternalApiResponse.class
+com\sonera1\stockmanagement\productcacheservice\ProductCacheServiceApplication.class
+com\sonera1\stockmanagement\productcacheservice\repository\entity\Product$ProductBuilder.class
+com\sonera1\stockmanagement\productcacheservice\repository\ProductRepository.class
+com\sonera1\stockmanagement\productcacheservice\response\ProductResponse.class
+com\sonera1\stockmanagement\productcacheservice\enums\Language.class
+com\sonera1\stockmanagement\productcacheservice\controller\ProductCacheController.class
+com\sonera1\stockmanagement\productcacheservice\service\ProductRepositoryService.class
+com\sonera1\stockmanagement\productcacheservice\response\FriendlyMessage$FriendlyMessageBuilder.class
