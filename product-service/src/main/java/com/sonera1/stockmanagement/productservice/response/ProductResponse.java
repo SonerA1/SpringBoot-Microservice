@@ -1,6 +1,5 @@
 package com.sonera1.stockmanagement.productservice.response;
 
-
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;

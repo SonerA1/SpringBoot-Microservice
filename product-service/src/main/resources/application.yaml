@@ -14,7 +14,8 @@ server:
 logging:
   level:
     root:
-    com.eleiatech: DEBUG
+    com.sonera1: DEBUG
+
 ---
 spring:
   profiles: localhost
@@ -24,15 +25,14 @@ spring:
   jpa:
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         default_schema: stock_management
   datasource:
     url: "jdbc:postgresql://postgres:5432/stock_management"
     username: postgres
     password: admin
-
 eureka:
   instance:
     instance-id: ${spring.application.name}:${random.uuid}
@@ -43,26 +43,30 @@ eureka:
 ---
 spring:
   profiles: stage
+  cloud:
+    config:
+      uri: http://localhost:8888
   jpa:
     hibernate:
       ddl-auto: update
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
         default_schema: stock_management
   datasource:
     url: "jdbc:postgresql://postgres:5432/stock_management"
     username: postgres
     password: admin
-
 eureka:
   client:
     service-url:
-      default-zone: http://eureka-server:8761/eureka/
-  instance:
-    prefer-ip-address: true
-    lease-renewal-interval-in-seconds: 10
-    instance-id: ${spring.application.name}:${random.uuid}
+      defaultZone: http://eureka-server:8761/eureka
+      lease-renewal-interval-in-seconds: 10
+      instance-id: ${spring.application.name}:${random.uuid}
+
+
+
+
 
 
 

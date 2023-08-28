@@ -8,13 +8,15 @@ import java.util.List;
 
 @Data
 @Builder
+//Bu yapı ile resapi service ile responseu hata mesajı success mesajı httpStatus gibi alanları kapsar. farklı bir alan ihtiyacı olursa da buraya eklenir
 public class InternalApiResponse<T> {
-    // rest API one type / Response error message- success mesage - http status needed all in
-    private FriendlyMessage friendlyMessage;
-    private T payload; // generic class
-    private boolean hasError;
-    private List<String> errorMessages;
-    private HttpStatus httpStatus; // for a not found, ok,created
+
+    private FriendlyMessage friendlyMessage; // mesajın title ve descriptionu bulunur
+    private T payload; // T diyerek generic type olduğunu belirttik
+    private boolean hasError; // error oluşup oluşmadığını tutar
+    private List<String> errorMessage; // hata mesajını ne olduğunu içericek
+    private HttpStatus httpStatus; // notfound bad request gibi statusleri tutar
+
 
 
 }
